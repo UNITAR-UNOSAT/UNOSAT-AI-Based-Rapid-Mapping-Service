@@ -1,4 +1,4 @@
-# -Rapid-Flood-Segmentation-in-SAR-imagery-based-onFully-Convolutional-Neural-Network
+# Rapid Flood Segmentation in SAR imagery based on Fully Convolutional Neural Network
 
 This GitHub repository contains the machine learning models described in Edoardo Nemnni, Joseph Bullock, Samir Belabbes, Lars Bromley (Rapid) Flood Segmentation in SAR imagery based onFully Convolutional Neural Network.
 
