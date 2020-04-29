@@ -19,6 +19,9 @@ This GitHub repository contains the machine learning models described in Edoardo
     doi={}
 }
 ```
+## Requirments
+
+Linux machine with Python 3.7
 
 ## Installation
 
