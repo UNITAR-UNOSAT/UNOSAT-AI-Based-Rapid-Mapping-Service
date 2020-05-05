@@ -36,7 +36,7 @@ conda install anaconda gdal
 ```
 ### Troubleshooting
 
-1) Error: GetProjection() RuntimeError: PROJ: proj_create_from_database: Cannot find proj.db. 
+Error: GetProjection() RuntimeError: PROJ: proj_create_from_database: Cannot find proj.db. 
 If so check https://github.com/OSGeo/gdal/issues/2248 or https://blog.csdn.net/qq_31793023/article/details/103622134 and set and Environment Variable PROJ_LIB with all the path where you find proj.db. 
 
 ```bash
@@ -44,6 +44,7 @@ If so check https://github.com/OSGeo/gdal/issues/2248 or https://blog.csdn.net/q
  set PROJ_LIB /root/anaconda3/pkgs/proj-6.2.1-hc80f0dc_0/share/proj
 ```
 
-2) NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
 
 Solution: https://docs.fast.ai/troubleshoot.html#initial-installation + https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html
