@@ -45,6 +45,6 @@ If so check https://github.com/OSGeo/gdal/issues/2248 or https://blog.csdn.net/q
 ```
 
 
-NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+Error: NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
 
 Solution: https://docs.fast.ai/troubleshoot.html#initial-installation + https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html
