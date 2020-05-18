@@ -21,10 +21,10 @@ This GitHub repository contains the machine learning models described in Edoardo
 ```
 ## Requirments
 
-Ubuntu ? or higher
+Ubuntu 18.04.4 or higher
 Python 3.7.6 or higher
 CUDA 10.0 or higher
-pytorch ? or higher
+
 
 ## Installation
 
