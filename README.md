@@ -36,7 +36,8 @@ Use the package manager [anaconda](https://www.anaconda.com/) to install the vir
 bash Anaconda3-2020.02-Linux-x86_64.sh
 conda create -n flood_mapping 
 source activate flood_mapping
-pip install -r requirement.txt
+pip install fastai keras tensorflow 
+pip install yaml pandas tqdm opencv-python
 conda install anaconda gdal
 ```
 ### Troubleshooting
