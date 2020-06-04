@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img width="400" height="400" src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/Graphical_Abstract.png">
+  <img width="400" height="500" src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/Graphical_Abstract.png">
 </p>
 
 
@@ -122,10 +122,14 @@ Overall quantitative comparison of  the  best  XNet,   U-Net  and  U-Net+ResNet 
 | UNet    | 97%| 91% | 92% | 0.91 |
 | U-Net + ResNet   | 97%| 91% | 92% | 0.92 |
 
-From left to right: tiles of different analysis are shown with the corresponding ground truth,baseline and neural network prediction.
+Example outputs of the best performing U-Net+ResNet, after probability thresholding, can be seen beloe.  In particular, we see the neural network's ability to detect the flood area with minimal cleaning in comparison to the ground-truth data. The baseline (third column was generated using the automatic threshold-based method and would require significantly more noise reduction in post-processing.
 
 <p align="center">
    <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/results_plot_28.png" width="700" /> 
+From left to right: tiles of different analysis are shown with the corresponding ground truth,baseline and neural network prediction.
 <p align="center">
+
+Eexamples of well detected tiles from both the automatic histogram-based method and this neural network, particularly highlighting severe flooded regions:
+
    <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/results_plot_34.png" width="700" /> 
 </p>
