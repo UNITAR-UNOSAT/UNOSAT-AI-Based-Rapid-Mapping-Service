@@ -100,8 +100,9 @@ Hyper-parameter tuning experimental setups for different architectures. Here we 
 
 Precision-recall  curved  for  different  experiments:a)XNet  trials; b)U-Net  trials; c)U-Net+ResNet trials. The curves show the precision and recall values at different probability thresholdsranging from 0.01 to 0.99.
 
-<p float="center">
+<p float="right">
   <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/xnet_all_pr_curves.png" width="300" />
+<p float="left">
   <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/unet_all_pr_curves.png" width="300" /> 
 </p>
 
