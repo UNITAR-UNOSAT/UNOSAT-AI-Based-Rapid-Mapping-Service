@@ -1,4 +1,4 @@
-# Rapid Flood Segmentation in SAR imagery based on Fully Convolutional Neural Network
+# Fully Convolutional Neural Network for Rapid Flood Segmentation in Synthetic Aperture Radar Imagery
 
 
 <p align="center">
@@ -6,7 +6,7 @@
 </p>
 
 
-This GitHub repository contains the machine learning models described in Edoardo Nemnni, Joseph Bullock, Samir Belabbes, Lars Bromley (Rapid) Flood Segmentation in SAR imagery based onFully Convolutional Neural Network.
+This GitHub repository contains the machine learning models described in Edoardo Nemnni, Joseph Bullock, Samir Belabbes, Lars Bromley Fully Convolutional Neural Network for Rapid Flood Segmentation in Synthetic Aperture Radar Imagery.
 
 ```
 @article{,
@@ -87,7 +87,7 @@ Rapid response to natural hazards, such as floods, is essential to mitigate loss
 
 ## Tables and Figures
 
-Hyper-parameter tuning experimental setups for different architectures. Here we vary thebatch size, number of times the training dataset is passed to the model during training2, the use of aweighted loss function, the filter depth of the convolutional layers (‘deep’ is four times the depth of‘shallow’) and the use of mixed precision during training. For the XNet and U-Net models this number refers to the number of times the entire training dataset was passed to themodel during training before Early Stopping was implemented. For the U-Net+ResNet case, the first number is the numberof times the dataset was passed when training just the head nodes of the architecture, and the latter the number of times itwas passed when training the entire network. In the latter case, at each epoch the validation loss was manualy comparedafter training and the best model selected.
+Hyper-parameter tuning experimental setups for different architectures. Here we vary thebatch size, number of times the training dataset is passed to the model during training, the use of aweighted loss function, the filter depth of the convolutional layers (‘deep’ is four times the depth of‘shallow’) and the use of mixed precision during training. For the XNet and U-Net models this number refers to the number of times the entire training dataset was passed to themodel during training before Early Stopping was implemented. For the U-Net+ResNet case, the first number is the numberof times the dataset was passed when training just the head nodes of the architecture, and the latter the number of times itwas passed when training the entire network. In the latter case, at each epoch the validation loss was manualy comparedafter training and the best model selected.
 
 
 
@@ -142,7 +142,7 @@ Example outputs of the best performing U-Net+ResNet, after probability threshold
 From left to right: tiles of different analysis are shown with the corresponding ground truth,baseline and neural network prediction.
 
 
-Eexamples of well detected tiles from both the automatic histogram-based method and this neural network, particularly highlighting severe flooded regions:
+Examples of well detected tiles from both the automatic histogram-based method and this neural network, particularly highlighting severe flooded regions:
 
 <p align="center">
 <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/results_plot_34.png" width="700" /> 
