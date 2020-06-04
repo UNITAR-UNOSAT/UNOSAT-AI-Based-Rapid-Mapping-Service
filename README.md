@@ -98,14 +98,14 @@ Hyper-parameter tuning experimental setups for different architectures. Here we 
 | UNet + resNet b8 d10/20 | 8 |10/20| x | default| x |
 | UNet + resNet b32 d10/200 | 32 |10/20| x | default| x |
 
-Precision-recall  curved  for  different  experiments:a)XNet  trials; b)U-Net  trials; c)U-Net+ResNet trials. The curves show the precision and recall values at different probability thresholdsranging from 0.01 to 0.99.
+Precision-recall  curved  for  different  experiments from top to bottom. XNet  trials;  U-Net  trials; and U-Net+ResNet trials. The curves show the precision and recall values at different probability thresholdsranging from 0.01 to 0.99.
 
-<p float="center">
-  <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/xnet_all_pr_curves.png" width="500" />
+<p align="center">
+   <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/xnet_all_pr_curves.png" width="500" /> 
 </p>
 
-<p float="center">
-  <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/unet_all_pr_curves.png" width="500" /> 
+<p align="center">
+   <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/unet_all_pr_curves.png" width="500" /> 
 </p>
 
 <p align="center">
