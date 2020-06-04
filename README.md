@@ -125,7 +125,7 @@ Overall quantitative comparison of  the  best  XNet,   U-Net  and  U-Net+ResNet 
 From left to right: tiles of different analysis are shown with the corresponding ground truth,baseline and neural network prediction.
 
 <p align="center">
-   <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/results_plot_28.png" width="500" /> 
+   <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/results_plot_28.png" width="700" /> 
 <p align="center">
-   <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/results_plot_34.png" width="500" /> 
+   <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/results_plot_34.png" width="700" /> 
 </p>
