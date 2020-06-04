@@ -3,7 +3,9 @@
 <p align="center">
   <img />
 </p>
-<img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/Graphical_Abstract.png" width="400" height="400">
+
+<img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/Graphical_Abstract.png" width="400" height="400"> </p>
+
 This GitHub repository contains the machine learning models described in Edoardo Nemnni, Joseph Bullock, Samir Belabbes, Lars Bromley (Rapid) Flood Segmentation in SAR imagery based onFully Convolutional Neural Network.
 
 ```
@@ -76,12 +78,11 @@ Rapid response to natural hazards, such as floods, is essential to mitigate loss
 Hyper-parameter tuning experimental setups for different architectures. Here we vary thebatch size, number of times the training dataset is passed to the model during training2, the use of aweighted loss function, the filter depth of the convolutional layers (‘deep’ is four times the depth of‘shallow’) and the use of mixed precision during training. For the XNet and U-Net models this number refers to the number of times the entire training dataset was passed to themodel during training before Early Stopping was implemented. For the U-Net+ResNet case, the first number is the numberof times the dataset was passed when training just the head nodes of the architecture, and the latter the number of times itwas passed when training the entire network. In the latter case, at each epoch the validation loss was manualy comparedafter training and the best model selected.
 
 
-| Model | Accuracy | Precision | Recall | F1 |
-| ------------- |:-----:|| :-----:|:-----:|:-----:|
-| Baseline    | 91%| 63% | 84% | 0.72 |
-| XNet    | 97%| 91% | 91% | 0.91 |
-| UNet    | 97%| 91% | 92% | 0.91 |
-| U-Net + ResNet   | 97%| 91% | 92% | 0.92 |
+
+| Name | Batch size | Dataset passes | Weighted Loss | Filter depth | Mixed |
+| ------------- |:-------------:| -----:| -----:| -----:|-----:|
+| XNet shallow   | 3 |1| | shallow | |
+
 
 
 Precision-recall  curved  for  different  experiments:a)XNet  trials; b)U-Net  trials; c)U-Net+ResNet trials. The curves show the precision and recall values at different probability thresholdsranging from 0.01 to 0.99.
@@ -92,7 +93,7 @@ Overall quantitative comparison of  the  best  XNet,   U-Net  and  U-Net+ResNet 
 
 
 | Model | Accuracy | Precision | Recall | F1 |
-| ------------- |:-----:|| :-----:|:-----:|:-----:|
+| ------------- |:-------------:| -----:| -----:| -----:|
 | Baseline    | 91%| 63% | 84% | 0.72 |
 | XNet    | 97%| 91% | 91% | 0.91 |
 | UNet    | 97%| 91% | 92% | 0.91 |
