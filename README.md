@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img width="400" height="500" src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/Graphical_Abstract.png">
+  <img width="500" height="400" src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/Graphical_Abstract.png">
 </p>
 
 
@@ -66,6 +66,18 @@ Error: NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA dri
 Solution: https://docs.fast.ai/troubleshoot.html#initial-installation + https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html
 
 # Examples
+
+## Training
+```bash
+python model_training.py --config_file /configs/config_example.yaml
+```
+## Inference
+```bash
+python model_inference.py --config_file /configs/config_example.yaml
+```
+## Fastai Training
+
+see notebook https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/Fastai%20training.ipynb
 
 # Paper
 
