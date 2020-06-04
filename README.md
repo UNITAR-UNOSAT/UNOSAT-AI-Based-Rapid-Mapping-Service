@@ -80,14 +80,27 @@ Hyper-parameter tuning experimental setups for different architectures. Here we 
 
 
 | Name | Batch size | Dataset passes | Weighted Loss | Filter depth | Mixed |
-| ------------- |:-------------:| -----:| -----:| -----:|-----:|
+| ------------- |:-------------:|:-----:|:-----:|:-----:|:-----:|
 | XNet shallow   | 3 |1| | shallow | |
-
-
+| XNet shallow weighted  | 3 |1| x | shallow | |
+| XNet shallow weighted  b8| 8 |1| x | shallow | |
+| XNet shallow weighted b8 d5 | 8 |5| x | shallow | |
+| XNet shallow weighted | 3 |1| x | deep| |
+| UNet shallow   | 3 |1| | shallow | |
+| UNet shallow weighted  | 3 |1| x | shallow | |
+| UNet shallow weighted  d5| 3 |5| x | shallow | |
+| UNet shallow weighted  b8| 8 |1| x | shallow | |
+| UNet shallow weighted b8 d5 | 8 |5| x | shallow | |
+| UNet shallow weighted | 3 |1| x | deep| |
+| UNet + resNet b4 d5/10 | 4 |5/10| x | default| x |
+| UNet + resNet b8 d5/10 | 8 |5/10| x | default| x |
+| UNet + resNet b8 d5/10 | 8 |5/10| x | default|  |
+| UNet + resNet b8 d10/20 | 8 |10/20| x | default| x |
+| UNet + resNet b32 d10/200 | 32 |10/20| x | default| x |
 
 Precision-recall  curved  for  different  experiments:a)XNet  trials; b)U-Net  trials; c)U-Net+ResNet trials. The curves show the precision and recall values at different probability thresholdsranging from 0.01 to 0.99.
 
-<img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/pr_curves.png" width="400" height="400">
+<img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/pr_curves.PNG" width="400" height="400">
 
 Overall quantitative comparison of  the  best  XNet,   U-Net  and  U-Net+ResNet  models  after hyper-parameter tuning compared against the automatic histogram based method baseline result.
 
