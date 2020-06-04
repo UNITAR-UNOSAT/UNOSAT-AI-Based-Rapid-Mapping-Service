@@ -1,10 +1,10 @@
 # Rapid Flood Segmentation in SAR imagery based on Fully Convolutional Neural Network
 
+
 <p align="center">
-  <img />
+  <img width="400" height="400" src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/Graphical_Abstract.png">
 </p>
 
-<img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/Graphical_Abstract.png" width="400" height="400"> </p>
 
 This GitHub repository contains the machine learning models described in Edoardo Nemnni, Joseph Bullock, Samir Belabbes, Lars Bromley (Rapid) Flood Segmentation in SAR imagery based onFully Convolutional Neural Network.
 
@@ -100,7 +100,15 @@ Hyper-parameter tuning experimental setups for different architectures. Here we 
 
 Precision-recall  curved  for  different  experiments:a)XNet  trials; b)U-Net  trials; c)U-Net+ResNet trials. The curves show the precision and recall values at different probability thresholdsranging from 0.01 to 0.99.
 
-<img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/pr_curves.PNG" width="700" height="700"></p>
+<p float="left">
+  <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/xnet_all_pr_curves.png" width="100" />
+  <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/unet_all_pr_curves.png" width="100" /> 
+  <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/fastai_unet_all_pr_curves.png" width="100" />
+</p>
+
+<p align="center">
+  <img width="500" height="500" src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/pr_curves.PNG">
+</p>
 
 Overall quantitative comparison of  the  best  XNet,   U-Net  and  U-Net+ResNet  models  after hyper-parameter tuning compared against the automatic histogram based method baseline result.
 
