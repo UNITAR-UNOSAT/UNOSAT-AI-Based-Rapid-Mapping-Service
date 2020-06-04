@@ -1,0 +1,28 @@
+architecture: 'xnet'
+
+tile dir: '/efs/data/jpb/flood_mapping/big_dataset/only_flood/tiles/'
+label dir: '/efs/data/jpb/flood_mapping/big_dataset/only_flood/labels/'
+
+model dir: '/efs/data/jpb/flood_mapping/Edoardo/naive_segmentation/models/'
+model name: 'example'
+
+training parameters:
+  train names: '/efs/data/jpb/flood_mapping/JPB/big_train_undersample_idx_fname.csv'
+  val names: '/efs/data/jpb/flood_mapping/JPB/big_valid_undersample_idx_fname.csv'
+  filter depth:
+    0: 16
+    1: 32
+    2: 64
+    3: 128
+    4: 0
+  batch size: 3
+  epochs before ES: 1
+  epochs after ES: 10
+  steps per epoch: 1
+  validation steps: 1
+  class weights:
+    background: 1
+    flood: 1
+
+testing parameters:
+  test names: '/efs/data/jpb/flood_mapping/JPB/big_test_undersample_idx_fname.csv'
