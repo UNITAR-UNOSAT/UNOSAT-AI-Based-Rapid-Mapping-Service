@@ -125,7 +125,8 @@ Overall quantitative comparison of  the  best  XNet,   U-Net  and  U-Net+ResNet 
 Example outputs of the best performing U-Net+ResNet, after probability thresholding, can be seen beloe.  In particular, we see the neural network's ability to detect the flood area with minimal cleaning in comparison to the ground-truth data. The baseline (third column was generated using the automatic threshold-based method and would require significantly more noise reduction in post-processing.
 
 <p align="center">
-   <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/results_plot_28.png" width="700" /> 
+   <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/results_plot_28.png" width="700" />
+	
 From left to right: tiles of different analysis are shown with the corresponding ground truth,baseline and neural network prediction.
 <p align="center">
 
