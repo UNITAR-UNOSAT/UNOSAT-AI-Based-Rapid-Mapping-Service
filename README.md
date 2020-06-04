@@ -1,5 +1,9 @@
 # Rapid Flood Segmentation in SAR imagery based on Fully Convolutional Neural Network
 
+<p align="center">
+  <img />
+</p>
+<img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/Graphical_Abstract.png" width="400" height="400">
 This GitHub repository contains the machine learning models described in Edoardo Nemnni, Joseph Bullock, Samir Belabbes, Lars Bromley (Rapid) Flood Segmentation in SAR imagery based onFully Convolutional Neural Network.
 
 ```
@@ -19,6 +23,8 @@ This GitHub repository contains the machine learning models described in Edoardo
     doi={}
 }
 ```
+# Instructions
+
 ## Requirments
 
 Ubuntu 18.04.4 or higher
@@ -29,6 +35,8 @@ CUDA 10.0 or higher
 
 
 ## Installation
+
+
 
 Use the package manager [anaconda](https://www.anaconda.com/) to install the virtual environment.
 
@@ -54,3 +62,38 @@ If so check https://github.com/OSGeo/gdal/issues/2248 or https://blog.csdn.net/q
 Error: NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
 
 Solution: https://docs.fast.ai/troubleshoot.html#initial-installation + https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html
+
+# Examples
+
+# Paper
+
+## Abstract
+
+Rapid response to natural hazards, such as floods, is essential to mitigate loss of life and the reduction of suffering. For emergency response teams, access to timely and accurate data is essential. Satellite imagery offers a rich source of information which can be analysed to help determine regions affected by a disaster.  Much remote sensing flood analysis is semi-automated, with time consuming manual components requiring hours to complete. In this study, we present a fully automated approach to the rapid flood mapping currently carried out by many national and international organisations. We take a Convolutional Neural Network based approach which isolates the flooded pixels in freely available Synthetic Aperture Radar (SAR) imagery, requiring no optical bands and minimal cleaning. Our methodology reduces the time required to develop a flood map by 80%, while maintaining the required performance standards - reaching 97% accuracy compared to human annotated maps. Given the open-source data and the minimal image cleaning required, this methodology can also be integrated into end-to-end pipelines for more timely and continuous flood monitoring.
+
+## Tables and Figures
+
+Hyper-parameter tuning experimental setups for different architectures. Here we vary thebatch size, number of times the training dataset is passed to the model during training2, the use of aweighted loss function, the filter depth of the convolutional layers (‘deep’ is four times the depth of‘shallow’) and the use of mixed precision during training. For the XNet and U-Net models this number refers to the number of times the entire training dataset was passed to themodel during training before Early Stopping was implemented. For the U-Net+ResNet case, the first number is the numberof times the dataset was passed when training just the head nodes of the architecture, and the latter the number of times itwas passed when training the entire network. In the latter case, at each epoch the validation loss was manualy comparedafter training and the best model selected.
+
+
+| Model | Accuracy | Precision | Recall | F1 |
+| ------------- |:-----:|| :-----:|:-----:|:-----:|
+| Baseline    | 91%| 63% | 84% | 0.72 |
+| XNet    | 97%| 91% | 91% | 0.91 |
+| UNet    | 97%| 91% | 92% | 0.91 |
+| U-Net + ResNet   | 97%| 91% | 92% | 0.92 |
+
+
+Precision-recall  curved  for  different  experiments:a)XNet  trials; b)U-Net  trials; c)U-Net+ResNet trials. The curves show the precision and recall values at different probability thresholdsranging from 0.01 to 0.99.
+
+<img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/pr_curves.png" width="400" height="400">
+
+Overall quantitative comparison of  the  best  XNet,   U-Net  and  U-Net+ResNet  models  after hyper-parameter tuning compared against the automatic histogram based method baseline result.
+
+
+| Model | Accuracy | Precision | Recall | F1 |
+| ------------- |:-----:|| :-----:|:-----:|:-----:|
+| Baseline    | 91%| 63% | 84% | 0.72 |
+| XNet    | 97%| 91% | 91% | 0.91 |
+| UNet    | 97%| 91% | 92% | 0.91 |
+| U-Net + ResNet   | 97%| 91% | 92% | 0.92 |
