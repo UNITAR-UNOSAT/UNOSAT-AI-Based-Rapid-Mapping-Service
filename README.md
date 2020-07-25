@@ -65,6 +65,10 @@ Error: NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA dri
 
 Solution: https://docs.fast.ai/troubleshoot.html#initial-installation + https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html
 
+# Dataset
+
+The UNOSAT Flood Dataset has been created for this study using Copernicus Sentinel-1 satellite imagery acquired in Interferometric Wide Swath (IW) and provided as Level-1 Ground Range Detected (GRD)  products at a resolution of 10 m x 10 m with corresponding flood vectors stored in shapefile format. Each image was downloaded from the [Copernicus Open Access Hub](https://scihub.copernicus.eu/dhus/#/home) in order to work on free and open-source data. The image name of each image used are listed in Table A1 in Appendix A of the paper. The analyses can be downloaded from the [UNOSAT Flood Portal](http://floods.unosat.org/geoportal/catalog/main/home.page), and the [UNOSAT page on the Humanitarian Data Exchange](https://data.humdata.org/organization/un-operational-satellite-appplications-programme-unosat).
+
 # Examples
 
 ## Training
