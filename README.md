@@ -158,7 +158,7 @@ Precision-recall  curved  for  different  experiments from top to bottom. XNet  
 </p>
 
 <p align="center">
-   <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/fastai_unet_all_pr_curves.png" width="500" /> 
+   <img src="https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/figures/fastai_unet_all_pr_curves_2.png" width="500" /> 
 </p>
 
 Overall quantitative comparison of  the  best  XNet,   U-Net  and  U-Net+ResNet  models  after hyper-parameter tuning compared against the automatic histogram based method baseline result.
