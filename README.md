@@ -130,22 +130,22 @@ Hyper-parameter tuning experimental setups for different architectures. Here we 
 
 | Name | Batch size | Dataset passes | Weighted Loss | Filter depth | Mixed |
 | ------------- |:-------------:|:-----:|:-----:|:-----:|:-----:|
-| XNet shallow   | 3 |1| | shallow | |
-| XNet shallow weighted  | 3 |1| x | shallow | |
-| XNet shallow weighted  b8| 8 |1| x | shallow | |
-| XNet shallow weighted b8 d5 | 8 |5| x | shallow | |
-| XNet shallow weighted | 3 |1| x | deep| |
-| UNet shallow   | 3 |1| | shallow | |
-| UNet shallow weighted  | 3 |1| x | shallow | |
-| UNet shallow weighted  d5| 3 |5| x | shallow | |
-| UNet shallow weighted  b8| 8 |1| x | shallow | |
-| UNet shallow weighted b8 d5 | 8 |5| x | shallow | |
-| UNet shallow weighted | 3 |1| x | deep| |
-| UNet + resNet b4 d5/10 | 4 |5/10| x | default| x |
-| UNet + resNet b8 d5/10 | 8 |5/10| x | default| x |
-| UNet + resNet b8 d5/10 | 8 |5/10| x | default|  |
-| UNet + resNet b8 d10/20 | 8 |10/20| x | default| x |
-| UNet + resNet b32 d10/200 | 32 |10/20| x | default| x |
+| XNet shallow   | 3 |1| | [16,32,64,128] | |
+| XNet shallow weighted  | 3 |1| x | [16,32,64,128]| |
+| XNet shallow weighted  b8| 8 |1| x | [16,32,64,128] | |
+| XNet shallow weighted b8 d5 | 8 |5| x | [16,32,64,128] | |
+| XNet shallow weighted | 3 |1| x | [56,128,256,512]| |
+| UNet shallow   | 3 |1| | [16,32,64,128] | |
+| UNet shallow weighted  | 3 |1| x | [16,32,64,128] | |
+| UNet shallow weighted  d5| 3 |5| x | [16,32,64,128]| |
+| UNet shallow weighted  b8| 8 |1| x |[16,32,64,128] | |
+| UNet shallow weighted b8 d5 | 8 |5| x | [16,32,64,128]| |
+| UNet shallow weighted | 3 |1| x | [56,128,256,512]| |
+| UNet + resNet b4 d5/10 | 4 |5/10| x | [64,128,256,512,1204]| x |
+| UNet + resNet b8 d5/10 | 8 |5/10| x | [64,128,256,512,1204]| x |
+| UNet + resNet b8 d5/10 | 8 |5/10| x | [64,128,256,512,1204]|  |
+| UNet + resNet b8 d10/20 | 8 |10/20| x | [64,128,256,512,1204]| x |
+| UNet + resNet b32 d10/200 | 32 |10/20| x | [64,128,256,512,1204]| x |
 
 Precision-recall  curved  for  different  experiments from top to bottom. XNet  trials;  U-Net  trials; and U-Net+ResNet trials. The curves show the precision and recall values at different probability thresholdsranging from 0.01 to 0.99.
 
@@ -164,12 +164,12 @@ Precision-recall  curved  for  different  experiments from top to bottom. XNet  
 Overall quantitative comparison of  the  best  XNet,   U-Net  and  U-Net+ResNet  models  after hyper-parameter tuning compared against the automatic histogram based method baseline result.
 
 
-| Model | Accuracy | Precision | Recall | F1 |
-| ------------- |:-------------:| -----:| -----:| -----:|
-| Baseline    | 91%| 63% | 84% | 0.72 |
-| XNet    | 97%| 91% | 91% | 0.91 |
-| UNet    | 97%| 91% | 92% | 0.91 |
-| U-Net + ResNet   | 97%| 91% | 92% | 0.92 |
+| Model | Accuracy | Precision | Recall | Critical Sucess Index | F1 |
+| ------------- |:-------------:| -----:| -----:|-----:| -----:|
+| Baseline    | 91%| 62% | 84% | 0.55 | 0.71 |
+| XNet    | 97%| 91% | 91% | 0.81 |0.91 |
+| UNet    | 97%| 91% | 92% | 0.83 |0.91 |
+| U-Net + ResNet   | 97%| 91% | 92% | 0.77| 0.92 |
 
 Example outputs of the best performing U-Net+ResNet, after probability thresholding, can be seen beloe.  In particular, we see the neural network's ability to detect the flood area with minimal cleaning in comparison to the ground-truth data. The baseline (third column was generated using the automatic threshold-based method and would require significantly more noise reduction in post-processing.
 
