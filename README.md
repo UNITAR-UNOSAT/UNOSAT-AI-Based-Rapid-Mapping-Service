@@ -69,17 +69,47 @@ Solution: https://docs.fast.ai/troubleshoot.html#initial-installation + https://
 
 The UNOSAT Flood Dataset has been created for this study using Copernicus Sentinel-1 satellite imagery acquired in Interferometric Wide Swath (IW) and provided as Level-1 Ground Range Detected (GRD)  products at a resolution of 10 m x 10 m with corresponding flood vectors stored in shapefile format. Each image was downloaded from the [Copernicus Open Access Hub](https://scihub.copernicus.eu/dhus/#/home) in order to work on free and open-source data. The image name of each image used are listed in Table A1 in Appendix A of the paper. The analyses can be downloaded from the [UNOSAT Flood Portal](http://floods.unosat.org/geoportal/catalog/main/home.page), and the [UNOSAT page on the Humanitarian Data Exchange](https://data.humdata.org/organization/un-operational-satellite-appplications-programme-unosat).
 
+Once the data has been downloaded, we compress it to 8-bit for computational efficiency which can be done as follows:
+
+```
+gdal_translate -co "COMPRESS=JPEG" -ot Byte uncompressed.tif compressed.tif
+```
+
+After this, the image and its corresponding labels must be tiled. We use `gdal` to split the images and labels into 256x256 pixel tiles for training. An example of how to do this is the following:
+
+```
+image = cv.imread(image_path, -1)
+label = cv.imread(label_path, -1)
+
+tile_size = (256, 256)
+offset = (256, 256)
+
+for i in tqdm(range(int(math.ceil(image.shape[0]/(offset[1] * 1.0))))):
+    for j in range(int(math.ceil(image.shape[1]/(offset[0] * 1.0)))):
+        cropped_img = image[offset[1]*i:min(offset[1]*i+tile_size[1], image.shape[0]), offset[0]*j:min(offset[0]*j+tile_size[0], image.shape[1])]
+        # Debugging the tiles
+        cv.imwrite(tile_img + save_name + str(i) + "_" + str(j) + ".png", cropped_img, [cv.IMWRITE_PNG_COMPRESSION, 0])
+
+for i in tqdm(range(int(math.ceil(label.shape[0]/(offset[1] * 1.0))))):
+    for j in range(int(math.ceil(label.shape[1]/(offset[0] * 1.0)))):
+        cropped_lab = label[offset[1]*i:min(offset[1]*i+tile_size[1], label.shape[0]), offset[0]*j:min(offset[0]*j+tile_size[0], label.shape[1])]
+        # Debugging the tiles
+        cv.imwrite(tile_lab + save_name + str(i) + "_" + str(j) + ".png", cropped_lab, [cv.IMWRITE_PNG_COMPRESSION, 0])
+```
+
+Alternative tiling mechanisms can be used depending on the overlap and zoom levels required.
+
 # Examples
 
-## Training
+## XNet and U-Net Training
 ```bash
 python model_training.py --config_file /configs/config_example.yaml
 ```
-## Inference
+## XNet and U-Net Inference
 ```bash
 python model_inference.py --config_file /configs/config_example.yaml
 ```
-## Fastai Training
+## Fastai Training and Inference
 
 see notebook https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Service/blob/master/Fastai%20training.ipynb
 
@@ -87,7 +117,7 @@ see notebook https://github.com/UNITAR-UNOSAT/UNOSAT-AI-Based-Rapid-Mapping-Serv
 
 ## Abstract
 
-Rapid response to natural hazards, such as floods, is essential to mitigate loss of life and the reduction of suffering. For emergency response teams, access to timely and accurate data is essential. Satellite imagery offers a rich source of information which can be analysed to help determine regions affected by a disaster.  Much remote sensing flood analysis is semi-automated, with time consuming manual components requiring hours to complete. In this study, we present a fully automated approach to the rapid flood mapping currently carried out by many non-governmental, national and international organisations. We take a Convolutional Neural Network (CNN) based approach which isolates the flooded pixels in freely available Copernicus Sentinel-1 Synthetic Aperture Radar (SAR) imagery, requiring no optical bands and minimal pre-processing. Our methodology reduces the time required to develop a flood map by 80%, while maintaining the required performance standards over a wide range of locations and environmental conditions. Given the open-source data and the minimal image cleaning required, this methodology can also be integrated into end-to-end pipelines for more timely and continuous flood monitoring.
+Rapid response to natural hazards, such as floods, is essential to mitigate loss of life1and the reduction of suffering. For emergency response teams, access to timely and accurate data is essential. Satellite imagery offers a rich source of information which can be analysed to help determine regions affected by a disaster. Much remote sensing flood analysis is semi-automated, with time consuming manual components requiring hours to complete. In this study, we present a fully automated approach to the rapid flood mapping currently carried out by many non-governmental, national  and  international  organisations. We take a  Convolutional  Neural  Network  (CNN) based  approach  which  isolates  the  flooded  pixels  in  freely  available  Copernicus  Sentinel-1 Synthetic Aperture Radar (SAR) imagery, requiring no optical bands and minimal pre-processing. We test a variety of CNN architectures and train our models on flood masks generated using a combination of classical semi-automated techniques and extensive manual cleaning and visual inspection.  Our methodology reduces the time required to develop a flood map by 80%, while achieving strong performance over a wide range of locations and environmental conditions. Given the open-source data and the minimal image cleaning required, this methodology can also be integrated into end-to-end pipelines for more timely and continuous flood monitoring.
 
 ## Tables and Figures
 
