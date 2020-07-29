@@ -75,7 +75,7 @@ Once the data has been downloaded, we compress it to 8-bit for computational eff
 gdal_translate -co "COMPRESS=JPEG" -ot Byte uncompressed.tif compressed.tif
 ```
 
-After this, the image and its corresponding labels must be tiled. We use `gdal` to split the images and labels into 256x256 pixel tiles for training. An example of how to do this is the following:
+After this, the image and its corresponding labels must be tiled. We use Python's math, numpy and opencv libraries to split the images and labels into 256x256 pixel tiles for training. An example of how to do this is the following:
 
 ```
 image = cv.imread(image_path, -1)
