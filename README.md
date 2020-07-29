@@ -90,8 +90,8 @@ for i in tqdm(range(int(math.ceil(image.shape[0]/(offset[1] * 1.0))))):
     for j in range(int(math.ceil(image.shape[1]/(offset[0] * 1.0)))):
         cropped_img = image[offset[1]*i:min(offset[1]*i+tile_size[1], image.shape[0]), offset[0]*j:min(offset[0]*j+tile_size[0], image.shape[1])]
         cropped_lab = label[offset[1]*i:min(offset[1]*i+tile_size[1], label.shape[0]), offset[0]*j:min(offset[0]*j+tile_size[0], label.shape[1])]
-         
-        if np.sum(cropped_img==flag) == 0 and np.sum(cropped_lab)>0: #exlude tiles if one flag-pixel is in the tile and tiles without flood-pixels
+        #Saves tile only if none of the pixels has the value 'flag' and if at least one flood pixels is present
+        if np.sum(cropped_img==flag) == 0 and np.sum(cropped_lab)>0: 
             count=count+1
         # Debugging the tiles
             #cv.imwrite(tile_img + save_name + str(i) + "_" + str(j) + ".png", cropped_img, [cv.IMWRITE_PNG_COMPRESSION, 0])
