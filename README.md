@@ -72,7 +72,7 @@ The UNOSAT Flood Dataset has been created for this study using Copernicus Sentin
 Once the data has been downloaded, we compress it to 8-bit for computational efficiency which can be done as follows:
 
 ```
-gdal_translate -co "COMPRESS=JPEG" -ot Byte uncompressed.tif compressed.tif
+gdal_translate -co "COMPRESS=JPEG" -ot Byte -b 1 uncompressed.tif compressed.tif
 ```
 
 After this, the image and its corresponding labels must be tiled. We use Python's math, numpy and opencv libraries to split the images and labels into 256x256 pixel tiles for training. An example of how to do this is the following:
