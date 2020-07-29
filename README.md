@@ -103,10 +103,12 @@ Alternative tiling mechanisms can be used depending on the overlap and zoom leve
 
 ## XNet and U-Net Training
 ```bash
+cd naive_segmentation
 python model_training.py --config_file /configs/config_example.yaml
 ```
 ## XNet and U-Net Inference
 ```bash
+cd naive_segmentation
 python model_inference.py --config_file /configs/config_example.yaml
 ```
 ## Fastai Training and Inference
