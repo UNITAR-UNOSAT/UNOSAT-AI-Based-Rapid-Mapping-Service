@@ -9,7 +9,7 @@
 This GitHub repository contains the machine learning models described in Edoardo Nemnni, Joseph Bullock, Samir Belabbes, Lars Bromley Fully Convolutional Neural Network for Rapid Flood Segmentation in Synthetic Aperture Radar Imagery.
 
 ```
-@article{,
+@article{UNOSAT-FloodAI,
 	title={Fully Convolutional Neural Network for Rapid Flood Segmentation in Synthetic Aperture Radar Imagery},
 	author={Nemni, E.; Bullock, J.; Belabbes, S.; Bromley L.},
 	journal={Remote Sensing},
