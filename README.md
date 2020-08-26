@@ -10,20 +10,21 @@ This GitHub repository contains the machine learning models described in Edoardo
 
 ```
 @article{,
-	title={},
-	author={},
+	title={Fully Convolutional Neural Network for Rapid Flood Segmentation in Synthetic Aperture Radar Imagery},
+	author={Nemni, E.; Bullock, J.; Belabbes, S.; Bromley L.},
 	journal={Remote Sensing},
 	volume={12},
 	number={8},
-	article-number={},
+	article-number={2532},
 	year={2020},
 	month={},
 	day={},
 	publisher={},
     url={},
     issn={},
-    doi={}
+    doi={https://doi.org/10.3390/rs12162532}
 }
+
 ```
 # Instructions
 
