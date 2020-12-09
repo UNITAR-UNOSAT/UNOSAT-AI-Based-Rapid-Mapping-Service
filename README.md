@@ -17,7 +17,7 @@ This GitHub repository contains the machine learning models described in Edoardo
 	number={8},
 	article-number={2532},
 	year={2020},
-	month={},
+	month={12},
 	day={},
 	publisher={},
     url={},
