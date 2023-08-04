@@ -12,7 +12,7 @@ Rapid response to natural hazards, such as floods, is essential to mitigate loss
 
 ## Paper 
 
-This GitHub repository contains the machine learning models described in Nemni, E.; Bullock, J.; Belabbes, S.; Bromley, L. Fully Convolutional Neural Network for Rapid Flood Segmentation in Synthetic Aperture Radar Imagery. Remote Sens. 2020, 12, 2532. https://doi.org/10.3390/rs12162532. Please see detailed information on the paper [here](paper.md).
+This GitHub repository contains the machine learning models described in Nemni, E.; Bullock, J.; Belabbes, S.; Bromley, L. Fully Convolutional Neural Network for Rapid Flood Segmentation in Synthetic Aperture Radar Imagery. Remote Sens. 2020, 12, 2532. https://doi.org/10.3390/rs12162532. Please see detailed information on the paper [here](docs/paper.md).
 
 ## Dataset
 
