@@ -26,7 +26,7 @@ Please see detailed setup instructions [here](docs/setup.md).
 
 1. Create an account on Alaska Satellite 
 1. Run the [downloader Jupyter Notebook](downloader.ipynb) to dowload the Sentinel-1 data
-1. Downlaod the groundtruth from [here](https://cernbox.cern.ch/s/2PIXlW3TP2bP5LM)
+1. Download the groundtruth from [here](https://cernbox.cern.ch/s/2PIXlW3TP2bP5LM)
 
 
 ## Using the model
