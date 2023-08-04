@@ -1,0 +1,13 @@
+fastai 
+keras 
+tensorflow 
+pyyaml
+pandas 
+tqdm 
+opencv-python
+requests
+pyshp
+pywin32
+asf_search
+jpy
+jupyter-notebook

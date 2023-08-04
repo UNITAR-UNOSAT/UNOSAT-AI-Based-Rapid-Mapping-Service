@@ -1,14 +1,14 @@
-architecture: 'xnet'
+architecture: 'xnet' #xnet or unet
 
-tile dir: '/efs/data/jpb/flood_mapping/big_dataset/only_flood/tiles/'
-label dir: '/efs/data/jpb/flood_mapping/big_dataset/only_flood/labels/'
+tile dir: '<YOUR_PATH>/tiles/'
+label dir: '<YOUR_PATH>/labels/'
 
-model dir: '/efs/data/jpb/flood_mapping/Edoardo/naive_segmentation/models/'
+model dir: '<YOUR_PATH>/naive_segmentation/models/'
 model name: 'example'
 
 training parameters:
-  train names: '/efs/data/jpb/flood_mapping/JPB/big_train_undersample_idx_fname.csv'
-  val names: '/efs/data/jpb/flood_mapping/JPB/big_valid_undersample_idx_fname.csv'
+  train names: '<YOUR_PATH>/train_idx_fname.csv'
+  val names: '<YOUR_PATH>/valid_idx_fname.csv'
   filter depth:
     0: 16
     1: 32
@@ -25,4 +25,4 @@ training parameters:
     flood: 1
 
 testing parameters:
-  test names: '/efs/data/jpb/flood_mapping/JPB/big_test_undersample_idx_fname.csv'
+  test names: '<YOUR_PATH>/test_idx_fname.csv'
